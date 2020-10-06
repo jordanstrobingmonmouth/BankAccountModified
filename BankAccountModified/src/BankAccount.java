@@ -11,10 +11,10 @@ public class BankAccount
    /**
       Constructs a bank account with zero balance.
    */
-   public BankAccount(double amount)
+   public BankAccount(double amount, double intpct)
    {
       balance = amount;
-      interestPct = .05;
+      interestPct = intpct;
    }
 
    /**
@@ -44,9 +44,9 @@ public class BankAccount
       Gets the current balance of this bank account.
       @return the current balance
    */
-   public void calcInterest(double amount) {
+   public void calcInterest() {
 	   
-	   balance = amount + (amount * interestPct);
+	   balance = balance + (balance * interestPct);
 	   
    }
    
